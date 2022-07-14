@@ -36,3 +36,5 @@ class metrics:
         data = pd.concat([tcs['Open']], axis = 1)
         data.columns = ['TCSOpen']
         scatter_matrix(data, figsize = (8,8), hist_kwds={'bins':250})
+
+        confused
