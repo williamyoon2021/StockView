@@ -1,3 +1,4 @@
+from tracemalloc import start
 import pandas as pd
 import datetime
 import numpy as np
@@ -29,19 +30,31 @@ import tkinter
 class metrics:
     stock = None
     stock_tick = None
-
+    start_date = None
+    end_date = None
+    
     # default download
     def __init__(self, name):
-        start = '2014-01-01'
-        end = '2019-01-01'
 
         global stock # can now edit global stock
         global stock_tick # can now edit global stock_tick
-        
+        global start_date
+        global end_date
+
+        start_date = '2017-01-01'
+        end_date = '2022-01-01'
+
         # downloads 5 year data
         # open, close, high, low, volume
-        stock = yf.download(name, start, end)
+        stock = yf.download(name, start_date, end_date)
         stock_tick = yf.Ticker(name)
+
+    # following guide
+    def confused(self, name):
+        close = stock['Close']
+        all_weekdays = pd.date_range(start_date, end_date, freq='B')
+        close = close.reindex(all_weekdays)
+
 
     # stock fluctuation
     def fluctuation(self, name): 
@@ -79,7 +92,19 @@ class metrics:
     # p/e ratio
     def p_e_ratio(self):
         stock_tick.info['forwardPE']
+
+    # peg ratio
+    def peg_ratio(self):
+        stock_tick.info['pegRatio']
     
-    def ped_ratiO(self):
-        stock_tick.inf0['forwardPE']
-    
+    # free cash flow
+    def cash_flow(self):
+        stock_tick.info['freeCashFlow']
+
+    # return on equity
+    def roe(self):
+        stock_tick.info['returnOnEquity']
+
+    # discounted cash flow
+    def discount_cash_flow(self):
+        dcf = (cash_flow / (1 + 0.04) ** 1) + (cash_flow / (1 + 0.04) ** 1) + (cash_flow / (1 + 0.04) ** 1) + (cash_flow / (1 + 0.04) ** 1) + (cash_flow / (1 + 0.04) ** 1)
