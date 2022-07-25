@@ -9,3 +9,7 @@ https://stackoverflow.com/questions/60428931/how-can-i-using-yfinance-to-get-fun
 https://www.learndatasci.com/tutorials/python-finance-part-yahoo-finance-api-pandas-matplotlib/
 https://www.learnpythonwithrune.org/how-to-calculate-sharpe-ratio-with-pandas-and-numpy/
 https://neptune.ai/blog/predicting-stock-prices-using-machine-learning
+
+Tasks
+--------------------------
+1. Make basic website that has buttons and can link to python
