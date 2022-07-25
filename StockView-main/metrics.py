@@ -108,3 +108,7 @@ class metrics:
     # discounted cash flow
     def discount_cash_flow(self):
         dcf = (cash_flow / (1 + 0.04) ** 1) + (cash_flow / (1 + 0.04) ** 1) + (cash_flow / (1 + 0.04) ** 1) + (cash_flow / (1 + 0.04) ** 1) + (cash_flow / (1 + 0.04) ** 1)
+    
+
+    def recommendation():
+        
