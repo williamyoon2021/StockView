@@ -1,3 +1,4 @@
+from cgitb import text
 from tracemalloc import start
 import pandas as pd
 import datetime
@@ -48,6 +49,11 @@ class metrics:
         # open, close, high, low, volume
         stock = yf.download(name, start_date, end_date)
         stock_tick = yf.Ticker(name)
+
+        # add Ticker data to data.html file
+        # file = open("data.html","w") # automatically deletes past data
+        # file.write(stock_tick.to_html())
+        # file.close
 
     # following guide
     def confused(self, name):
@@ -108,7 +114,6 @@ class metrics:
     # discounted cash flow
     def discount_cash_flow(self):
         dcf = (cash_flow / (1 + 0.04) ** 1) + (cash_flow / (1 + 0.04) ** 1) + (cash_flow / (1 + 0.04) ** 1) + (cash_flow / (1 + 0.04) ** 1) + (cash_flow / (1 + 0.04) ** 1)
-    
 
     def recommendation():
         

@@ -8,3 +8,4 @@ https://www.fool.com/investing/2018/03/21/9-essential-metrics-all-smart-investor
 https://stackoverflow.com/questions/60428931/how-can-i-using-yfinance-to-get-fundamental-ratios-such-as-p-e-p-b
 https://www.learndatasci.com/tutorials/python-finance-part-yahoo-finance-api-pandas-matplotlib/
 https://www.learnpythonwithrune.org/how-to-calculate-sharpe-ratio-with-pandas-and-numpy/
+https://neptune.ai/blog/predicting-stock-prices-using-machine-learning
