@@ -13,3 +13,11 @@ https://neptune.ai/blog/predicting-stock-prices-using-machine-learning
 Tasks
 --------------------------
 1. Make basic website that has buttons and can link to python
+
+
+Technologies
+--------------------------
+Front-end: HTML/CSS, JS, React
+Backend: Python, Django
+Server: Mongodb
+Hosting: Heroku
