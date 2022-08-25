@@ -7,7 +7,6 @@ import matplotlib.pyplot as plt
 from pandas.plotting import scatter_matrix
 import yfinance as yf # Yahoo Finance stock data
 import config
-import tkinter
 
 # dict_keys(['zip', 'sector', 'fullTimeEmployees', 'longBusinessSummary', 'city', 'phone', 'state', 'country', 'companyOfficers', 'website', 
 # 'maxAge', 'address1', 'fax', 'industry', 'address2', 'ebitdaMargins', 'profitMargins', 'grossMargins', 'operatingCashflow', 'revenueGrowth', 
@@ -56,7 +55,6 @@ class metrics:
         close = stock['Close']
         all_weekdays = pd.date_range(start_date, end_date, freq='B')
         close = close.reindex(all_weekdays)
-
 
     # stock fluctuation
     def fluctuation(self, name): 
