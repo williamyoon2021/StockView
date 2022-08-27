@@ -29,7 +29,28 @@ class main:
             else:
                 print('Please enter only uppercase letters!')
 
+    def press_button(self):    
+        stockButton = ttk.Button(root, text='Get Stock', command=get_stock())
+        stockButton.pack(side = 'top')
+        self.other_buttons()
+    
+    def other_buttons(self):
+        randomButton = ttk.Button(root, text='Two hundred day MA', command=metrics.cap("random"))
+        randomButton.pack(side = 'bottom')
+
     name = get_stock()
     metrics.def_download(name)
+        
+
+
+    # stockButton = ttk.Button(root, text='To HTML', command=metrics.write_to_html())
+    # stockButton.pack(side = 'bottom')  
+    
+  
+    
+
+    # shouldIButton = ttk.Button(root, text="Demcision", command=metrics.recomendation)
+
+    root.mainloop()
         
     
